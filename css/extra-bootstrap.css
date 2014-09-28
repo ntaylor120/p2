@@ -1,0 +1,30 @@
+/*!
+ * Bootstrap v3.2.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/*add background color for thumbnails*/
+.bg-ltGray {
+  color: #000;
+  background-color: #f8f8f8;
+  padding: 10 px;
+  margin: 10 px;
+}
+
+/* add photo to background of site */
+
+body {
+  margin: 0;
+  background-image:url(../images/bg.jpg);
+  background-position: 0 0 !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg {
+	background-image:url(../images/bg.jpg);
+	background-repeat:no-repeat
+}
