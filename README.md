@@ -6,7 +6,7 @@ CSCI E-15:  Dynamic Web Applications
 
 ## Live url
 
-[http://p1.nrtainmenttesting.me]  (http://p1.nrtainmenttesting.me)
+[http://http://p2.nrtainmenttesting.me]  (http://http://p2.nrtainmenttesting.me)
 
 
 ## Description

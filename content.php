@@ -1,8 +1,10 @@
 
+<?php require('logic.php'); ?>
+
 
  <div class="container">
-   
-    <div class="jumbotron">
+   <!--
+    <div class="jumbotron-sand">
      <div class="row">
       <div class="col-xs-6 pull-left"> 
             
@@ -21,15 +23,13 @@
       </div>
     </div>
 
-  <div class="container">
+  <div class="container">-->
 
-    <div class="jumbotron">
+    <div class="jumbotron-sand">
       
           
             <form>
             <h3>XKCD Password Generator</h3>
-
-            <h4>Generate a new password</h4><br />
 
             <h4>Your current password</h4><br />
 
@@ -37,25 +37,26 @@
 
             <h4>Generate new password</h4><br />
 
-            <form method = "POST" action="/index.php">
+              <form method = "POST" action="/index.php">
 
-            <label name="count">Number of Words</label>
-            <input type="text" id="count" name="count" /><br />
+              <label name="count">Number of Words</label>
+              <input type="text" id="count" name="count" /><br />
 
-            <label name="uppercase">Uppercase first letter?</label>
-            <input type="checkbox" name="uppercase" value="uppercase" /><br />
+              <label name="uppercase">Uppercase first letter?</label>
+              <input type="checkbox" name="uppercase" value="uppercase" /><br />
 
-            <label name="symbol">Use a symbol?</label>
-            <input type="checkbox" name="symbol" value="symbol" /><br />
+              <label name="symbol">Use a symbol?</label>
+              <input type="checkbox" name="symbol" value="symbol" /><br />
 
-            <label name="number">Include a number?</label>
-            <input type="checkbox" name="number" value="number" /><br />
+              <label name="number">Include a number?</label>
+              <input type="checkbox" name="number" value="number" /><br />
 
 
 
-            <input type="submit" name="submit" value="submit"/>
-            <br/>
-            </form>
+              <input type="submit" name="submit" value="submit"/> <br/>
+             
+              </form>
+              </form>
 
           </div>
       </div>
