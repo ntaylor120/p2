@@ -8,6 +8,17 @@
 
 if (isset($_POST['count'])){
 	$count=$_POST ['count'];
+
+	//checking code
+
+	if (!is_numeric($count)) {
+		# ensure that nobody put letters in the number field
+		return 'ERROR: number input expected';
+	}
+
+
+	
+
 } else {
 	$count = 1;
 	# takes the number from the number of words field, and send that to the 'array generator' (see below)
@@ -34,6 +45,8 @@ if (isset($_POST['number'])){
 	else {
 	$number = false;
 }
+
+
 
 //check - the count from the form should be a number, not a letter, and it shouldn't be larger than ...
 
