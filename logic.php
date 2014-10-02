@@ -7,18 +7,21 @@ if (isset($_POST['count'])){
 
 	//checking code
 
-		if (!is_numeric($count)) {
-			# ensure that nobody put letters in the number field
-			echo 'ERROR: number input expected';
-			return;
-		}
+	//	if (!is_numeric($count)) {
+	//		# ensure that nobody put letters in the number field
+	//		echo 'ERROR: number input expected';
+	//		return;
+	//	}
 
 
 	} else {
-		$count = 1;
+		echo 'please input a number';
+		$count = 0;
 		# takes the number from the number of words field, and send that to the 'array generator' (see below)
-		#if no number is supplied, assume one word
+		#if no number is supplied, do nothing
+
 	}
+
 
 if (isset($_POST['uppercase'])){
 	$uppercase = true;
@@ -43,7 +46,7 @@ if (isset($_POST['number'])){
 
 
 
-
+//************** Processes the options and creates the actual password array, returns that password to the content.php page
 
 
 
@@ -52,9 +55,9 @@ if ($words = file('words2.txt')){
 
 	
 	$selected_words = [];  //create an empty array that will hold the list of words for the password
-	$getnumber = [0,1,2,3,4,5,6,7,8,9];
-	$getsymbol = ['!', '@', '#', '$', '%', '&', '*'];
-
+	$getsymbol = ['!', '@', '#', '$', '%', '&', '*'];  //contains the symbols that will be used in the symbol option
+	$getnumber = [0,1,2,3,4,5,6,7,8,9];  //numbers for the number option
+	
 		for ($i=0; $i < $count ; $i++) {    //get number of words for the $selected_words array, based on $count
 
 			// generate random number from zero to dictionary size:
@@ -66,39 +69,37 @@ if ($words = file('words2.txt')){
 
 			$word = $words[$rand];   //find a random word
 
-			//echo $word . '<br />';  //test to make sure that the logic is working
-
+		
 			array_push($selected_words, $word); //add this to the $selected_words array
 
 			}
 
 		if ($uppercase){
-			//set password to upper
+			
 			//loop through words and change first letter to uppercase
 
 			foreach ($selected_words as $index => $word) {
 
 				$selected_words[$index] = ucfirst($word); 
-				//echo $selected_words[$index] . '<br />';
+				
 			}
 
 		}
 
 		if ($symbol){
-			$newsymbol= array_rand($getsymbol, 1);
+			$newsymbol= array_rand($getsymbol, 1);  //get a random element from the array $getsymbol and call variable $newsymbol
 			array_push($selected_words, $newsymbol); //add this to the $selected_words array
 
 
-			// get symbol
+			
 		}
 
 
 		if ($number){
-			$newnumber = array_rand($getnumber, 1);
+			$newnumber = array_rand($getnumber, 1);  //get random element from the array $getnumber and call varialble $newnumber
 			array_push($selected_words, $newnumber);
 
-			//get number
-
+			
 
 		}
 
