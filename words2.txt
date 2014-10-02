@@ -92,7 +92,7 @@ crotchet
 cuddlytoy
 cuppa
 daft
-Dekko
+dekko
 dene
 divvy
 do
@@ -168,7 +168,7 @@ jerry
 jerrybuilt
 jimmy
 jobsworth
-Joey
+joey
 jumper
 kecks
 kerfuffle
