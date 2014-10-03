@@ -55,7 +55,9 @@ if ($words = file('words2.txt')){
 
 	
 	$selected_words = [];  //create an empty array that will hold the list of words for the password
-	
+	$getsymbol = ['!', '@', '#', '$', '%', '&', '*'];  //contains the symbols that will be used in the symbol option
+	$getnumber = [0,1,2,3,4,5,6,7,8,9];  //numbers for the number option
+																				
 		for ($i=0; $i < $count ; $i++) {    //get number of words for the $selected_words array, based on $count
 
 			// generate random number from zero to dictionary size:
@@ -84,12 +86,11 @@ if ($words = file('words2.txt')){
 
 		}
 
-	$getsymbol = ['!', '@', '#', '$', '%', '&', '*'];  //contains the symbols that will be used in the symbol option
-	$getnumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];  //numbers for the number option
-	
-
 		if ($symbol){
+			//echo 'In symbol';
 			$newsymbol= array_rand($getsymbol, 1);  //get a random element from the array $getsymbol and call variable $newsymbol
+			$newsymbol= $getsymbol[$newsymbol];
+			//echo ' New symbol should be '.$newsymbol;
 			array_push($selected_words, $newsymbol); //add this to the $selected_words array
 
 
